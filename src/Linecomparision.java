@@ -1,37 +1,20 @@
 public class Linecomparision {
-    public double coordinatesForLine1() {
+    public double FindLength() {
         double x1 = 10d;
         double y1 = 20d;
         double x2 = 10d;
         double y2 = 20d;
         double lengthOfLine1 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
         System.out.println("Length of line 1 : " + lengthOfLine1);
+        System.out.println("Length of line 2 : " +lengthOfLine1);
         return lengthOfLine1;
+
     }
-
-     // @return Length of line 2
-     // @coordinatesForLine1 is a method for line 2 coordinates And calculating length of line 1.
-
-
-    public double coordinatesForLine2() {
-        double x1 = 30d;
-        double y1 = 20d;
-        double x2 = 30d;
-        double y2 = 20d;
-        double lengthOfLine2 = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        System.out.println("Length of line 2 : " + lengthOfLine2);
-        return lengthOfLine2;
-    }
-
-
-     // @equalityOfLength is a method for checking equality of two length using java equal method
-
-
-    public void equalityOfLength() {
-        double line1 = coordinatesForLine1();
+    // @equalityOfLength is a method for checking equality of two length using java equal meth//
+         public void equalityOfLines() {
+        double line1 = FindLength();
         String s1 = Double.toString(line1);
-        double line2 = coordinatesForLine2();
-        String s2 = Double.toString(line2);
+        String s2 = Double.toString(line1);
         if (s1.equals(s2))
             System.out.println("Both lines are same in length");
         else
@@ -43,10 +26,9 @@ public class Linecomparision {
 
 
     public void compareLength() {
-        double line1 = coordinatesForLine1();
+        double line1 = FindLength();
         String s1 = Double.toString(line1);
-        double line2 = coordinatesForLine2();
-        String s2 = Double.toString(line2);
+        String s2 = Double.toString(line1);
         if (s1.compareTo(s2) < 0) {
             System.out.println(s1 + " is less than the" + s2);
             System.out.println("s2 string is greater");
@@ -62,9 +44,8 @@ public class Linecomparision {
     public static void main (String[] args){
         Linecomparision length = new Linecomparision();
         System.out.println("Welcome to Line Comparison Computation Program");
-        length.coordinatesForLine1();
-        length.coordinatesForLine2();
-        length.equalityOfLength();
+        length.FindLength();
+        length.equalityOfLines();
         length.compareLength();
     }
 }
